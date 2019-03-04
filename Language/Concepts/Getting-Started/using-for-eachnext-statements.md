@@ -22,13 +22,18 @@ Sub CloseForms()
 End Sub
 ```
 
-The following code loops through each element in an array and sets the value of each to the value of the index variable I.
+The following code loops through each element in an array and calculates the sum.
 
 ```vb
-Dim TestArray(10) As Integer, I As Variant 
-For Each I In TestArray 
- TestArray(I) = I 
-Next I 
+Dim TestArray() As Variant
+Dim Element, Sum As Long
+
+TestArray = Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+Sum = 0
+
+For Each Element In TestArray
+    Sum = Sum + Element
+Next Element
 
 ```
 
